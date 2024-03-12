@@ -4,10 +4,10 @@ import bcrypt from 'bcryptjs';
 import prisma from '@/lib/prisma';
 
 export async function GET(request: Request) {
-  await prisma.todo.deleteMany(); // delete * from todo
   await prisma.user.deleteMany(); // delete * from user
+  await prisma.todo.deleteMany(); // delete * from todo
 
-  const user = await prisma.user.create({
+  await prisma.user.create({
     data: {
       email: 'test1@gmail.com',
       password: bcrypt.hashSync('123456'),
