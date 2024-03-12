@@ -6,7 +6,7 @@ services:
     container_name: todos-db
     restart: always
     ports:
-      - 5432:5432
+      - 5434:5434
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
