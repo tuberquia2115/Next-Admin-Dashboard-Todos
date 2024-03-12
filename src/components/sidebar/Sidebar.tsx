@@ -12,8 +12,9 @@ import {
 
 import devTuberLogo from '../../../public/devtuber.webp';
 import profileAvatar from '../../../public/avatarProfile.webp';
-import { authOptions } from '@/app/api/auth/[...nextauth]/route';
+
 import { LogoutButton, SidebarItem } from '..';
+import { authOptions } from '@/auth';
 
 const menuItems = [
   {
